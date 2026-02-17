@@ -7,7 +7,8 @@ PETHs).
 
 The tutorial demonstrates how to explore large-scale neural population
 structure across the mouse brain using clustering, similarity-based
-embeddings, and anatomical organization.
+embeddings, and anatomical organization. 
+(Based on https://www.biorxiv.org/content/10.1101/2025.07.30.667641v1)
 
 ------------------------------------------------------------------------
 
