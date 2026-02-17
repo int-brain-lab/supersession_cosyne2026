@@ -27,11 +27,11 @@ https://drive.google.com/file/d/1afkr1UQHGLOif-khmIQO9--PWElHUSj-/view?usp=shari
 
 After download, place the files into your local IBL cache directory:
 
-    <ONE cache>/dmn/res/
+    <ONE cache>/cosyne2026/res/
 
 Example (Linux):
 
-    ~/FlatIron/dmn/res/
+    ~/FlatIron/cosyne2026/res/
 
 These files contain trial-averaged concatenated peri-event time
 histograms (PETHs) for \>50,000 neurons across the Brain-Wide Map
