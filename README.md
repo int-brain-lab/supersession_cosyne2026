@@ -3,7 +3,7 @@
 This repository contains code for the Cosyne 2026 supersession tutorial
 on analyzing the International Brain Laboratory (IBL) Brain-Wide Map
 (BWM) dataset using trial-averaged neuronal responses (concatenated
-PETHs).
+PETHs). (Slides: https://docs.google.com/presentation/d/1i2o6p9f-Ab5e5ilnPh7_cGxCQTZFWsZr6Eft3F4qLRU/edit?usp=sharing)
 
 The tutorial demonstrates how to explore large-scale neural population
 structure across the mouse brain using clustering, similarity-based
