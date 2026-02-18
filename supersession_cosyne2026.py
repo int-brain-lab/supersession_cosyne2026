@@ -19,9 +19,9 @@ from iblatlas.regions import BrainRegions
 # --------------------------------------------------
 br = BrainRegions()
 
-# Cache path (repo-local, independent of current working directory)
+# Cache path (repo-local)
 REPO_DIR = Path(__file__).resolve().parent
-pth_dmn = REPO_DIR / "cosyne2026"
+pth_dmn = REPO_DIR
 pth_dmn.mkdir(parents=True, exist_ok=True)
 
 
