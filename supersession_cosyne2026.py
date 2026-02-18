@@ -12,17 +12,15 @@ from sklearn.cluster import KMeans
 from rastermap import Rastermap
 
 # IBL / atlas
-from one.api import ONE
 from iblatlas.regions import BrainRegions
 
 # --------------------------------------------------
 # Globals required by regional_group
 # --------------------------------------------------
-one = ONE()
 br = BrainRegions()
 
 # Cache path (same as original)
-pth_dmn = Path(one.cache_dir, "cosyne2026")
+pth_dmn = Path.cwd() / "cosyne2026"
 pth_dmn.mkdir(parents=True, exist_ok=True)
 
 
