@@ -42,7 +42,36 @@ regardless of your current working directory.
 
 ------------------------------------------------------------------------
 
-## 2. Quick start
+## 2. Environment setup
+
+Create/activate your environment and install dependencies before running
+examples.
+
+``` bash
+conda activate iblenv
+pip install -U numpy matplotlib scikit-learn rastermap one-api iblatlas
+```
+
+------------------------------------------------------------------------
+
+## 3. Smoke test (recommended)
+
+Before running full analyses, verify import and data-path setup:
+
+``` bash
+cd ~/code/supersession_cosyne2026
+python - <<'PY'
+from pathlib import Path
+import supersession_cosyne2026 as s
+print('repo root:', s.pth_dmn)
+print('res exists:', Path(s.pth_dmn, 'res').exists())
+print('concat file exists:', Path(s.pth_dmn, 'res', 'concat_cvFalse_ephysFalse.npy').exists())
+PY
+```
+
+------------------------------------------------------------------------
+
+## 4. Quick start
 
 ### Plot example neurons
 
@@ -54,7 +83,7 @@ plot_example_neurons()
 
 ------------------------------------------------------------------------
 
-## 3. Population structure visualizations
+## 5. Population structure visualizations
 
 ### K-means clustering
 
@@ -103,7 +132,7 @@ plot_rastermap(
 
 ------------------------------------------------------------------------
 
-## 4. About the dataset
+## 6. About the dataset
 
 For details on downloading and working with the raw Brain-Wide Map data:
 
@@ -111,7 +140,7 @@ https://docs.internationalbrainlab.org/notebooks_external/2025_data_release_brai
 
 ------------------------------------------------------------------------
 
-## 5. Related publication
+## 7. Related publication
 
 Basic analyses of this dataset are described in:
 
@@ -119,7 +148,7 @@ https://www.nature.com/articles/s41586-025-09235-0
 
 ------------------------------------------------------------------------
 
-## 6. Scope of this tutorial
+## 8. Scope of this tutorial
 
 This tutorial is intended for:
 
@@ -135,7 +164,7 @@ data.
 
 ------------------------------------------------------------------------
 
-## 7. Notes
+## 9. Notes
 
 -   Each dataset file is \~1 GB.
 -   The repository contains analysis code only; large data files are
