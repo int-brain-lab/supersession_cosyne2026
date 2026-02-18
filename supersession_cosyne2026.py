@@ -19,8 +19,9 @@ from iblatlas.regions import BrainRegions
 # --------------------------------------------------
 br = BrainRegions()
 
-# Cache path (same as original)
-pth_dmn = Path.cwd() / "cosyne2026"
+# Cache path (repo-local, independent of current working directory)
+REPO_DIR = Path(__file__).resolve().parent
+pth_dmn = REPO_DIR / "cosyne2026"
 pth_dmn.mkdir(parents=True, exist_ok=True)
 
 
@@ -35,7 +36,11 @@ c_sec =  1.0 / (T_BIN / int(T_BIN // sts))
 # --------------------------------------------------
 # Allen color palette
 # --------------------------------------------------
-pal = np.load(Path(pth_dmn, "alleninfo.npy"), allow_pickle=True).flat[0]
+alleninfo_path = REPO_DIR / "alleninfo.npy"
+if not alleninfo_path.exists():
+    # backward-compatible fallback
+    alleninfo_path = pth_dmn / "alleninfo.npy"
+pal = np.load(alleninfo_path, allow_pickle=True).flat[0]
 
 # --------------------------------------------------
 # PETH label dictionary (needed by regional_group)

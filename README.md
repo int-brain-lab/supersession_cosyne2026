@@ -25,17 +25,20 @@ https://drive.google.com/file/d/1_TEqHAbzwKqxqESLVR5MTkkC4vfh4Z-l/view?usp=shari
 `concat_cvTrue_ephysFalse.npy`\
 https://drive.google.com/file/d/1afkr1UQHGLOif-khmIQO9--PWElHUSj-/view?usp=sharing
 
-After download, place the files into your local IBL cache directory:
+After download, place the files into the repository-local cache folder:
 
-    <ONE cache>/cosyne2026/res/
+    <repo>/cosyne2026/res/
 
 Example (Linux):
 
-    ~/FlatIron/cosyne2026/res/
+    ~/code/supersession_cosyne2026/cosyne2026/res/
 
 These files contain trial-averaged concatenated peri-event time
 histograms (PETHs) for \>50,000 neurons across the Brain-Wide Map
 dataset.
+
+The code now resolves this path relative to the script location, so it
+works regardless of your current working directory.
 
 ------------------------------------------------------------------------
 
