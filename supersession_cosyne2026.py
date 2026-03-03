@@ -13,6 +13,7 @@ from sklearn.cluster import KMeans
 from rastermap import Rastermap
 
 # IBL / atlas
+import iblatlas
 from iblatlas.regions import BrainRegions
 
 # --------------------------------------------------
@@ -548,7 +549,8 @@ def regional_group(
 
     else:
         acs = np.array(br.id2acronym(r["ids"], mapping=mapping))
-        cols = np.array([pal[reg] for reg in acs])
+        cols = np.array([np.astype(br.rgb[br.acronym2index(reg)[1][0][0]], float) / 255 for reg in acs])
+        # cols = np.array([pal[reg] for reg in acs])
         r["acs"] = acs
         r["cols"] = cols
 
@@ -699,8 +701,7 @@ def plot_example_neurons(
                 yi = r[feat][i]
                 yy = yi + j * off
                 lbl = str(r[label_key][i])
-                color = pal[lbl]
-
+                color = np.astype(br.rgb[br.acronym2index(lbl)[1][0][0]], float) / 255
                 ax.plot(xx, yy, linewidth=linewidth, color='black', alpha=0.9)
                 y_max_seen = max(y_max_seen, np.nanmax(yy))
 
